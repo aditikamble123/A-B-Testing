@@ -1,6 +1,6 @@
 ## 🧪 A/B Testing Analysis: Should We Launch the New Landing Page?
 
-#📌 Overview
+##📌 Overview
 This project analyzes the results of a real-world A/B test comparing two landing page designs — a control (old) page and a treatment (new) page — to determine whether the new design increases conversion rates.
 
 🎯 Goal: Use statistical and visual analysis to decide whether the treatment group (new page) performs significantly better than the control group (old page).
@@ -12,7 +12,7 @@ Stakeholders: Product managers, marketing team, UX designers
 
 Success Metric: Statistically significant increase in conversion rate
 
-#🧰 Tech Stack
+##🧰 Tech Stack
 Layer	Tools Used
 📊 BI / Reporting	Power BI Desktop
 🧠 Statistical Test	Python (statsmodels)
@@ -20,22 +20,18 @@ Layer	Tools Used
 🧹 Cleaning & ETL	SQL queries
 📁 Dataset Source	Cleaned A/B data (ab_data.csv)
 
-#🗃 Dataset Details
+##🗃 Dataset Details
 Total Users: 61,601
 
 Fields:
 
 user_id: Unique ID
-
 timestamp: Event time
-
 group_name: control or treatment
-
 landing_page: old or new page
-
 converted: 1 if converted, 0 otherwise
 
-#✅ Key Steps
+##✅ Key Steps
 1. Data Cleaning (SQL)
 Removed 3,893 mismatched rows where group ≠ landing_page
 Final clean dataset: 61,601 rows
@@ -64,9 +60,9 @@ z_stat, p_value = proportions_ztest(successes, nobs)
 Z-statistic: 1.1255
 P-value: 0.2604
 
-#No significant difference — the new page does not improve conversion.
+##No significant difference — the new page does not improve conversion.
 
-#📊 Power BI Dashboard Features
+##📊 Power BI Dashboard Features
 
 KPI Cards: Control/Treatment conversion rates and total users
 Bar Chart: Conversion rate by group
@@ -74,14 +70,14 @@ Line Chart: Daily trend of conversion rates
 Funnel Visual: Group-wise funnel from users to conversions
 Interactive Filters: Drill down by date, group, landing page
 
-#💡 Final Insights & Recommendation
+##💡 Final Insights & Recommendation
 The A/B test showed no statistically significant improvement in conversion from the new landing page (p = 0.2604).
 Recommendation: Do not roll out the new design. Maintain current landing page and consider testing other UX elements.
 
-#📈 Screenshots
+##📈 Screenshots
 ![Screenshot (240)](https://github.com/user-attachments/assets/d5a0e144-7d60-4482-a809-4cfda262bb8d)
 
-#🧠 What I Learned
+##🧠 What I Learned
 Designing A/B test analysis using SQL, DAX, and Python
 
 Performing statistical hypothesis testing with z-test
